@@ -1,0 +1,86 @@
+{
+  "name": "lm-studio-mcp-sidekick",
+  "version": "1.0.0",
+  "description": "LM Studio MCP connector for context offload and menial task automation",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "mocha test/unit/**/*.test.js",
+    "test:integration": "mocha test/integration/**/*.test.js",
+    "lint": "eslint src/ --ext .js",
+    "lint:fix": "eslint src/ --ext .js --fix",
+    "security:audit": "npm audit",
+    "security:check": "npm run security:audit && npm run lint",
+    "build": "echo 'No build step required for this MCP'",
+    "clean": "rm -rf logs/ tmp/ node_modules/.cache/",
+    "docs": "jsdoc src/ -d docs/ -r"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "lm-studio",
+    "ai",
+    "automation",
+    "context-offload",
+    "local-llm"
+  ],
+  "author": "Jordan Ehrig <jordan@ehrigbim.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamuraiBuddha/lm-studio-mcp-sidekick.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SamuraiBuddha/lm-studio-mcp-sidekick/issues"
+  },
+  "homepage": "https://github.com/SamuraiBuddha/lm-studio-mcp-sidekick#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "dotenv": "^16.4.5",
+    "axios": "^1.7.2",
+    "winston": "^3.13.0",
+    "node-cron": "^3.0.3",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "cors": "^2.8.5",
+    "rate-limiter-flexible": "^5.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-security": "^3.0.1",
+    "mocha": "^10.4.0",
+    "chai": "^5.1.1",
+    "sinon": "^18.0.0",
+    "jsdoc": "^4.0.3",
+    "nodemon": "^3.1.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/SamuraiBuddha"
+  }
+}
