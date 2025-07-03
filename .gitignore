@@ -1,0 +1,80 @@
+# LM Studio MCP Sidekick - Comprehensive .gitignore
+
+# Environment & Secrets
+.env*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+config/secrets/
+private/
+auth/
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Runtime & Logs
+logs/
+*.log
+pid
+*.pid
+*.seed
+*.pid.lock
+.npm
+.node_repl_history
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.coverage/
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# LM Studio Specific
+models/
+*.gguf
+*.bin
+model_cache/
+inference_logs/
+chat_history/
+conversation_backups/
+
+# MCP Runtime
+mcp_runtime/
+*.sock
+*.pipe
+ipc/
+
+# Testing
+coverage/
+.nyc_output
+junit.xml
+test-results/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.temp
+.temp/
